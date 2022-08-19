@@ -14,6 +14,8 @@ public class OrangeTester {
 
         printOrange(inventory,orange->"Pretty Orange "+orange.getWeight()); // same with the previous line
 
+        OrangeFormatter orangeFancyFormatter=orange -> {if(orange.getWeight()>=200) return "Heavy orange "+orange.getWeight();return "Light orange "+orange.getWeight();};
+        printOrange(inventory,orangeFancyFormatter);
     }
 
     private static void printOrange(List<Orange> inventory,OrangeFormatter oFormatter){

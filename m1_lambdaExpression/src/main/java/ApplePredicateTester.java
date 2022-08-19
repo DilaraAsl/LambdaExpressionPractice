@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class ApplePredicateTester {
     public static void main(String[] args) {
@@ -20,6 +21,10 @@ public class ApplePredicateTester {
         prettyPrintApple(inventory,ap2);
         System.out.println(filterApples(inventory, appleByWeight));
         System.out.println(filterApples(inventory, appleByColor));
+        System.out.println("**********************************");
+        inventory.forEach(v->System.out.println(v));
+
+
     }
 
     private static List<Apple> filterApples(List<Apple> inventory, ApplePredicate applePredicate) {

@@ -10,15 +10,19 @@ public class PerformOperationTester {
         PerformOperation po=n->n%2!=0;
         System.out.println(num+" is odd:"+ po.operation(num));
 
-        PerformOperation pp=n->{if(n<=1) return false;
+        PerformOperation pPrime=n->{if(n<=1) return false;
             for (int i = 2; i <n/2 ; i++) {
                 if(n%i==0) return false;
-
-
             }
             return true;
             };
 
-        System.out.println(pp.operation(num));
+        System.out.println(pPrime.operation(num));
+
+
+        PerformOperation pPalindrome=n->{String s=String.valueOf(n);StringBuilder sb=new StringBuilder(); sb.append(n);sb.reverse();
+        if(s.equals(sb.toString())) return true; return false;};
+
+        System.out.println(pPalindrome.operation(num));
     }
 }
